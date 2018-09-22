@@ -4,7 +4,7 @@
     <title>Getting Started: Handling Form Submission</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link th:href="@{/css/login.css}" rel="stylesheet" />
+    <link th:href="@{/css/points.css}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -18,20 +18,26 @@
 
                 <hr>
             </div>
+
+            <div class="circle-container">
+                <div class="row">
+                <div class="outer-circle">
+                    <!--Inner circle grows and shrinks for demo purposes-->
+                    <div class="inner-circle">
+                        <p><span>20</span>pts</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="flex-item" id="buttons">
-            <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
-                <p>Email</p>
-                <input type="text" placeholder="JohnDoe@email.com"/>
-                <br>
-                <p>Password</p>
-                <input type="password" placeholder="••••••••"/>
-                <br>
-
-
-                <input id="submit" type="submit" value="Login">
-            </form>
+        <div class="flex-item">
+            <div class="header-2">
+                <h1>Rewards</h1>
+                <hr>
+            </div>
+            <div class="tbd">
+                TBD
+            </div>
         </div>
     </div>
 </div>

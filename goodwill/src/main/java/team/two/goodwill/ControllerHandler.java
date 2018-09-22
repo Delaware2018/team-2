@@ -67,10 +67,18 @@ public class ControllerHandler {
 //    }
 
 
+    // TODO remove
     @GetMapping("/donations")
     public String donations(){
         return "donations";
     }
+
+    @GetMapping("/points")
+    public String points(){
+        return "points";
+    }
+    // TODO
+
 
     //Below is testing locations for input
 
