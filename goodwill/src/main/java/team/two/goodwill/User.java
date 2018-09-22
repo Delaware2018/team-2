@@ -5,13 +5,17 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
 @Table(name="users")
-public class User {
+@Getter @Setter @NoArgsConstructor
+public class User{
 
 
 
-    public User(){}
 
     @Id
     private int key;
@@ -45,8 +49,10 @@ public class User {
         this.phoneNumber = phoneNumber; }
 
 
-     public static void createUser(User user){
-     }
+     public static void createUser(User user2){
+        String test = "Select * FROM Employee" + user2.getName() + "AND pass = ' ' " + user2.getName()+ "' '";
+        return ;
+    }
 
 
 }

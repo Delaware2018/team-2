@@ -18,7 +18,6 @@ public class Service {
         addr = sock.getInetAddress();
 
 
-
     }
 
 
