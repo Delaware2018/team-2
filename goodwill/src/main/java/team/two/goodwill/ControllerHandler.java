@@ -67,7 +67,10 @@ public class ControllerHandler {
 //    }
 
 
-
+    @GetMapping("/donations")
+    public String donations(){
+        return "donations";
+    }
 
     //Below is testing locations for input
 
