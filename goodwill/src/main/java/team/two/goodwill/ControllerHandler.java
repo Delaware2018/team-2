@@ -37,6 +37,15 @@ public class ControllerHandler {
         return "register";
     }
 
+    @GetMapping("/register_cont")
+    public String registration_cont() {
+        return "register_cont";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
 
 
 

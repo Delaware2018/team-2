@@ -22,19 +22,16 @@
 
         <div class="flex-item" id="buttons">
             <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
-                <!--<i class="fa fa-user" style="font-size: 2em; padding-right: 3%"></i>-->
-                <p>Name</p>
-                <input type="text" placeholder="John Doe"/>
+                <p>Email</p>
+                <input type="text" placeholder="JohnDoe@email.com"/>
                 <br>
-                <p>Zip Code</p>
-                <!--<i class="fa fa-home" style="font-size: 2em; padding-right: 3%"></i>-->
-                <input type="text" placeholder="987654"/>
+                <p>Password</p>
+                <input type="password" placeholder="••••••••"/>
                 <br>
-                <p>Phone Number</p>
-                <!--<i class="fa fa-phone" style="font-size: 2em; padding-right: 3%"></i>-->
-                <input type="text" placeholder="(555)555-5555"/>
+                <p>Repeat Password</p>
+                <input type="password" placeholder="••••••••"/>
 
-                <input id="submit" type="submit" value="Continue">
+                <input id="submit" type="submit" value="Finish Registration">
             </form>
         </div>
     </div>
