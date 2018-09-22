@@ -43,7 +43,7 @@ public class ControllerHandler {
 
     @PostMapping("/register")
     public String registerEnd(@ModelAttribute User newBe, @RequestParam(name="name") String name){
-
+        service.setUser(newBe);
         return "test";
     }
 
