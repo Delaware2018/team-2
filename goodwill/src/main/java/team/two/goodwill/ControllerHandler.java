@@ -14,16 +14,24 @@ public class ControllerHandler {
 
     //Home Page
     @GetMapping("/")
-    public String homePageRequest(@RequestParam(name="name", required=false, defaultValue="World") String greeting, Model model) {
-        model.addAttribute("greeting", greeting);
+    public String homePageRequest() {
         return "home";
     }
 
 
-    @RequestMapping(value=HOME_PAGE, method= RequestMethod.POST)
-    public ModelAndView loginHomeClick(@ModelAttribute User modelatt,@RequestParam(value="homeOption", required=true) String action){
+    @RequestMapping(value=HOME_PAGE,params="login", method= RequestMethod.POST)
+    public String loginHomeClick(){
 
         System.out.println("\nYou have clicked login");
+
+        return "test";
+    }
+    @RequestMapping(value=HOME_PAGE,params="register", method= RequestMethod.POST)
+    public String registerHomeClick(){
+
+        System.out.println("\nYou have clicked register");
+
+        return "register";
     }
 
 //    @RequestMapping(value=HOME_PAGE, params="registerClick", method = RequestMethod.TRACE)
