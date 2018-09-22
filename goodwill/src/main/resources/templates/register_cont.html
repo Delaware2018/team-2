@@ -21,23 +21,22 @@
         </div>
 
         <div class="flex-item" id="buttons">
-
-            <form action="#" th:action="@{/register}" th:object="${newBe}" method="post">
-                <p>Name</p>
-                <input type="text" th:name="name" placeholder="John Doe"/>
+            <form action="#" th:action="@{/register_cont}" th:object="${credentials}" method="post">
+                <p>Email</p>
+                <input type="text" th:value="*{username}" placeholder="JohnDoe@email.com"/>
                 <br>
-                <p>Zip Code</p>
-                <input type="text" th:name="zipCode" placeholder="987654"/>
+                <p>Password</p>
+                <input type="password" th:value="*{password}"  placeholder="••••••••"/>
                 <br>
-                <p>Phone Number</p>
-                <input type="text" th:name="phoneNumber" placeholder="(555)555-5555"/>
+                <p>Repeat Password</p>
+                <input type="password" th:value="*{passwordVer}" placeholder="••••••••"/>
 
-
-                <input id="submit" type="submit" value="Continue">
+                <input id="submit" type="submit" value="Finish Registration">
             </form>
         </div>
     </div>
 </div>
 
 </body>
+
 </html>
