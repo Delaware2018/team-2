@@ -6,7 +6,7 @@ body {
     /*background-color: #1B7BD3;*/
     /*background: linear-gradient(#1E7FD9, #01529C);*/
     background: white;
-    color: white;
+    color: #707070;
     font-family: Segoe UI, Helvetica, sans-serif;
     margin: 0;
 }
@@ -20,6 +20,7 @@ body {
     margin-bottom: 3%;
     font-size: 1.5em;
     font-weight: bold;
+    color: #01529C;
 }
 
 .header h2 {
@@ -30,7 +31,7 @@ body {
 
 hr {
     width:10%;margin:0 auto;
-    background-color: white;
+    background-color: #01529C;
     border-color: transparent;
     height: 2px;
 
@@ -42,24 +43,32 @@ hr {
     border-color: transparent;
     border-radius: 10px;
     width: 200px;
-    height: 35px;
-    color: #9A9A9A;
+    /*height: 35px;*/
+    /*color: #9A9A9A;*/
+    color: #01529C;
     background-color: white;
     font-weight: bolder;
+    font-size: 1.2em;
     margin-bottom: 0;
-    padding-left: 3%;
+    text-align: left;
+    margin-left: 0;
 
     /*box-shadow: 0px 6px 40px -7px;*/
 
 }
 
-.flex-item p {
+.inputContainer {
+    text-align: left;
+}
 
+.flex-item p {
+    margin-bottom: 0;
+    text-align: left;
 }
 
 .flex-container {
-    background-color: #1E7FD9;
-    height: 85%;
+    /*background-color: #1E7FD9;*/
+    height: 100%;
     padding: 0;
     margin: 0;
     display: -webkit-box;
@@ -69,7 +78,7 @@ hr {
     display: flex;
     /*align-items: center;*/
     justify-content: center;
-    box-shadow: 0px 6px 40px -7px grey;
+    /*box-shadow: 0px 6px 40px -7px grey;*/
 
 }
 .row {
@@ -79,6 +88,11 @@ hr {
 
 #buttons {
     margin-top: 20%;
+    font-weight: bolder;
+    color: #8C8C8C;
+    font-size: 1.2em;
+    padding: 0 15% 0 15%;
+
 }
 
 .flex-item {
@@ -95,33 +109,41 @@ hr {
 }
 
 .flex-item p {
-    margin-bottom: 4%;
+
 }
 
 #submit {
-    margin-top: 30%;
+    margin-top: 15%;
     border-color: transparent;
     border-radius: 25px;
     width: 230px;
     height: 48px;
     color: white;
     background-color: #00519C;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 1em;
-
+    text-align: center;
     box-shadow: 0px 6px 40px -7px grey;
 
 }
 
+.prompt {
+    margin-bottom: 10%;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #9A9A9A;
-    opacity: 1; /* Firefox */
+    opacity: .6; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #9A9A9A;
+    opacity: .6; /* Firefox */
+
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: #9A9A9A;
+    opacity: .6; /* Firefox */
+
 }

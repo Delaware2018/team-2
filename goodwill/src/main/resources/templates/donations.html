@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/donations.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<div class="flex-container">
+    <div class="row">
+        <div class="flex-item">
+            <div class="header">
+                <h1>Donations</h1>
+
+                <hr>
+            </div>
+        </div>
+
+        <div class="flex-item" id="buttons">
+            <p class="prompt">How many ________ did you donate today?</p>
+            <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
+                <div class="inputContainer">
+                <p>Clothes</p>
+                <input type="number" placeholder="0"/>
+                <br>
+
+                <p>Furniture Items</p>
+                <input type="number" placeholder="0"/>
+                <br>
+
+                <p>Electronics</p>
+                <input type="number" placeholder="0"/>
+                <br>
+
+                <p>Books</p>
+                <input type="number" placeholder="0"/>
+                <br>
+                </div>
+
+
+                <input id="submit" type="submit" value="Submit Form">
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
