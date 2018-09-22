@@ -46,6 +46,7 @@ public class User {
 
 
      public static void createUser(User user){
+        System.out.println("TESTING: Name: " + user.getName() + "\nZip: " + user.getZipCode() + "\nPhone: " + user.getPhoneNumber());
      }
 
 
