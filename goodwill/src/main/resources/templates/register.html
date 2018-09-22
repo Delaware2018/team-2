@@ -21,18 +21,17 @@
         </div>
 
         <div class="flex-item" id="buttons">
-            <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
-                <!--<i class="fa fa-user" style="font-size: 2em; padding-right: 3%"></i>-->
+
+            <form action="#" th:action="@{/register}" th:object="${newBe}" method="post">
                 <p>Name</p>
-                <input type="text" placeholder="John Doe"/>
+                <input type="text" th:name="name" placeholder="John Doe"/>
                 <br>
                 <p>Zip Code</p>
-                <!--<i class="fa fa-home" style="font-size: 2em; padding-right: 3%"></i>-->
-                <input type="text" placeholder="987654"/>
+                <input type="text" th:name="zipCode" placeholder="987654"/>
                 <br>
                 <p>Phone Number</p>
-                <!--<i class="fa fa-phone" style="font-size: 2em; padding-right: 3%"></i>-->
-                <input type="text" placeholder="(555)555-5555"/>
+                <input type="text" th:name="phoneNumber" placeholder="(555)555-5555"/>
+
 
                 <input id="submit" type="submit" value="Continue">
             </form>
@@ -41,5 +40,4 @@
 </div>
 
 </body>
-
 </html>

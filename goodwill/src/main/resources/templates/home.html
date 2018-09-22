@@ -21,12 +21,12 @@
 
 
             <div class="flex-item" id="buttons">
-                <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
-                    <input type="submit" value="Login"/>
+                <form action="#" method="post">
+                    <input type="submit" name="login" value="Login"/>
 
                     <p>or</p>
 
-                    <input type="submit" value="Register"/>
+                    <input type="submit" name="register" value="Register"/>
                 </form>
             </div>
         </div>
