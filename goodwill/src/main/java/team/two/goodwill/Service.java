@@ -12,7 +12,6 @@ import org.jsoup.Jsoup;
 @org.springframework.stereotype.Service
 public class Service {
 
-<<<<<<< HEAD
     public static void main(String args[]) throws Exception {
         InetAddress addr;
         Socket sock = new Socket("localhost", 8080);
@@ -40,7 +39,5 @@ public class Service {
             //user.setName();
 
    }
-=======
 
->>>>>>> b9120dbf35fa66eae16d8cd2152a80a251112276
 }

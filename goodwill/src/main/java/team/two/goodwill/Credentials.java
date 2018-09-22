@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="creds")
 public class Credentials {
@@ -47,7 +48,7 @@ public class Credentials {
     }
 
     public static void create(Credentials input){
-        //Log pass
+
     }
 
     public static boolean isUser(Credentials input){
