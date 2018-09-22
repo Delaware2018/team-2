@@ -8,12 +8,34 @@
 
 </head>
 <body>
-    <h1 class="head">Goodwill</h1>
-    <h2 class="subhead">Delaware</h2>
 
-    <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
-        <input type="submit" value="Login" />
-        <input type="reset" value="Register" />
-    </form>
+    <div class="flex-container">
+        <div class="row">
+            <div class="flex-item">
+                <div class="header">
+                <h1>Goodwill</h1>
+                <h2>Delaware</h2>
+                    <hr>
+                </div>
+            </div>
+
+
+            <div class="flex-item" id="buttons">
+                <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
+                    <input type="submit" value="Login"/>
+
+                    <p>or</p>
+
+                    <input type="submit" value="Register"/>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="header">-->
+
+    <!--</div>-->
+
+
 </body>
 </html>
