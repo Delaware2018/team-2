@@ -10,7 +10,7 @@ public class ControllerHandler {
 
    private final String HOME_PAGE = "/";
    private final String LOGIN_PAGE = "/login";
-
+   private Service service;
 
     //Home Page
     @GetMapping("/")
@@ -24,7 +24,7 @@ public class ControllerHandler {
 
         System.out.println("\nYou have clicked login");
 
-        return "test";
+        return "login";
     }
     @RequestMapping(value=HOME_PAGE,params="register", method= RequestMethod.POST)
     public String registerHomeClick(){
@@ -34,6 +34,16 @@ public class ControllerHandler {
         return "register";
     }
 
+
+    @PostMapping("/register")
+    public String registerEnd(@ModelAttribute User newBe){
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String loginUser(){
+        return "";
+    }
 //    @RequestMapping(value=HOME_PAGE, params="registerClick", method = RequestMethod.TRACE)
 //    public void registerHomeClick(){
 //        System.out.println("\nYou have clicked register!");
