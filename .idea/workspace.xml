@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e196d65-72d5-41a4-ae34-b79bcc907d67" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/goodwill/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/goodwill/src/main/resources/templates/home.html" afterDir="false" />
-    </list>
+
+    <list default="true" id="679f7d89-99e1-4a24-ba67-7f1ee11930b0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
@@ -117,23 +117,6 @@
               <item name="two" type="462c0819:PsiDirectoryNode" />
               <item name="goodwill" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="team-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="team-2" type="462c0819:PsiDirectoryNode" />
-              <item name="goodwill" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="team-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="team-2" type="462c0819:PsiDirectoryNode" />
-              <item name="goodwill" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -162,6 +145,7 @@
       </list>
     </option>
   </component>
+
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -270,4 +254,5 @@
       </provider>
     </entry>
   </component>
+
 </project>
