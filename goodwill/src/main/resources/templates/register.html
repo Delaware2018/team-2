@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/registration.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<div class="flex-container">
+    <div class="row">
+        <div class="flex-item">
+            <div class="header">
+                <h1>Register</h1>
+
+                <hr>
+            </div>
+        </div>
+
+        <div class="flex-item" id="buttons">
+
+            <form action="#" th:action="@{/register}" th:object="${newBe}" method="post">
+                <!--<i class="fa fa-user" style="font-size: 2em; padding-right: 3%"></i>-->
+                <p>Name</p>
+                <input type="text" th:name="name" value="John Doe"/>
+                <br>
+                <p>Zip Code</p>
+                <!--<i class="fa fa-home" style="font-size: 2em; padding-right: 3%"></i>-->
+                <input type="text" th:name="zipCode" value="Zip Code"/>
+                <br>
+                <p>Phone Number</p>
+                <!--<i class="fa fa-phone" style="font-size: 2em; padding-right: 3%"></i>-->
+                <input type="text" th:name="phoneNumber" value="(555)555-5555"/>
+
+                <input id="submit" type="submit" value="Continue">
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

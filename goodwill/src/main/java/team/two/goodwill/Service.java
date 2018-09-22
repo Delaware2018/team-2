@@ -35,3 +35,7 @@ public class Service {
     public Dao getValue(){
         return new Dao();
     }
+    public void setUpUser(User newUser){
+
+    }
+}
