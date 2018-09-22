@@ -4,20 +4,21 @@ html, body {
 
 body {
     /*background-color: #1B7BD3;*/
-    background: linear-gradient(#1E7FD9, #01529C);
+    /*background: linear-gradient(#1E7FD9, #01529C);*/
+    background: white;
     color: white;
     font-family: Segoe UI, Helvetica, sans-serif;
     margin: 0;
 }
 
 .header {
-    padding-top: 60%;
+    padding-top: 7.5%;
 }
 
 .header h1 {
 
-    margin-bottom: 0;
-    font-size: 2.2em;
+    margin-bottom: 3%;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -28,23 +29,27 @@ body {
 }
 
 hr {
-    width:15%;margin:0 auto;
+    width:10%;margin:0 auto;
     background-color: white;
     border-color: transparent;
     height: 2px;
 
 }
 
+
+
 .flex-item input {
     border-color: transparent;
-    border-radius: 25px;
-    width: 230px;
-    height: 48px;
-    color: #2B2D2F;
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    color: #9A9A9A;
     background-color: white;
     font-weight: bolder;
+    margin-bottom: 0;
+    padding-left: 3%;
 
-    box-shadow: 0px 6px 40px -7px;
+    /*box-shadow: 0px 6px 40px -7px;*/
 
 }
 
@@ -53,7 +58,8 @@ hr {
 }
 
 .flex-container {
-    height: 100%;
+    background-color: #1E7FD9;
+    height: 85%;
     padding: 0;
     margin: 0;
     display: -webkit-box;
@@ -63,6 +69,8 @@ hr {
     display: flex;
     /*align-items: center;*/
     justify-content: center;
+    box-shadow: 0px 6px 40px -7px grey;
+
 }
 .row {
     width: auto;
@@ -70,7 +78,7 @@ hr {
 }
 
 #buttons {
-    margin-top: 80%;
+    margin-top: 20%;
 }
 
 .flex-item {
@@ -84,4 +92,23 @@ hr {
     /*font-weight: bold;*/
     /*font-size: 2em;*/
     text-align: center;
+}
+
+.flex-item p {
+    margin-bottom: 4%;
+}
+
+#submit {
+    margin-top: 30%;
+    border-color: transparent;
+    border-radius: 25px;
+    width: 230px;
+    height: 48px;
+    color: white;
+    background-color: #00519C;
+    font-weight: bolder;
+    font-size: 1em;
+
+    box-shadow: 0px 6px 40px -7px grey;
+
 }

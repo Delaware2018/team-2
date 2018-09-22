@@ -3,7 +3,6 @@ package team.two.goodwill;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ControllerHandler {
@@ -20,11 +19,11 @@ public class ControllerHandler {
     }
 
 
-    @RequestMapping(value=HOME_PAGE, method= RequestMethod.POST)
-    public ModelAndView loginHomeClick(@ModelAttribute User modelatt,@RequestParam(value="homeOption", required=true) String action){
-
-        System.out.println("\nYou have clicked login");
-    }
+//    @RequestMapping(value=HOME_PAGE, method= RequestMethod.POST)
+//    public ModelAndView loginHomeClick(@ModelAttribute User modelatt,@RequestParam(value="homeOption", required=true) String action){
+//
+//        System.out.println("\nYou have clicked login");
+//    }
 
 //    @RequestMapping(value=HOME_PAGE, params="registerClick", method = RequestMethod.TRACE)
 //    public void registerHomeClick(){
@@ -32,7 +31,11 @@ public class ControllerHandler {
 //    }
 
 
-
+    @GetMapping("/register")
+    public String registration() {
+//        model.addAttribute("name", name);
+        return "register";
+    }
 
 
 
