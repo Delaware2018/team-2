@@ -2,28 +2,35 @@ package team.two.goodwill;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ControllerHandler {
 
-   // String homeState;
+   private final String HOME_PAGE = "/";
+   private final String LOGIN_PAGE = "/login";
+
 
     //Home Page
     @GetMapping("/")
-    public String homePage(@RequestParam(name="name", required=false, defaultValue="World") String greeting, Model model) {
+    public String homePageRequest(@RequestParam(name="name", required=false, defaultValue="World") String greeting, Model model) {
         model.addAttribute("greeting", greeting);
         return "home";
     }
 
-    /*
-    @PostMapping("/")
-    public String homePageClick(){
-        return "home";
+
+    @RequestMapping(value=HOME_PAGE, method= RequestMethod.POST)
+    public ModelAndView loginHomeClick(@ModelAttribute User modelatt,@RequestParam(value="homeOption", required=true) String action){
+
+        System.out.println("\nYou have clicked login");
     }
-    */
+
+//    @RequestMapping(value=HOME_PAGE, params="registerClick", method = RequestMethod.TRACE)
+//    public void registerHomeClick(){
+//        System.out.println("\nYou have clicked register!");
+//    }
+
 
 
 
