@@ -62,6 +62,19 @@ public class ControllerHandler {
         model.addAttribute("credentials", new Credentials());
         return "login";
     }
+<<<<<<< HEAD
+=======
+//    @RequestMapping(value=HOME_PAGE, params="registerClick", method = RequestMethod.TRACE)
+//    public void registerHomeClick(){
+//        System.out.println("\nYou have clicked register!");
+//    }
+
+
+    @GetMapping("/donations")
+    public String donations(){
+        return "donations";
+    }
+>>>>>>> 81d37329e498bce74560984e99c992ab471f70e8
 
 
     @PostMapping("/login")
