@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class ControllerHandler {
-
+    private UserRepository repo;
    private final String HOME_PAGE = "/";
    private final String LOGIN_PAGE = "/login";
    private Service service;
@@ -35,9 +35,16 @@ public class ControllerHandler {
     }
 
 
+    @GetMapping("/register")
+    public String loadRegister(Model model){
+        model.addAttribute("newBe", new User());
+        return "register";
+    }
+
     @PostMapping("/register")
-    public String registerEnd(@ModelAttribute User newBe){
-        return "login";
+    public String registerEnd(@ModelAttribute User newBe, @RequestParam(name="name") String name){
+
+        return "test";
     }
 
     @PostMapping("/login")
@@ -48,14 +55,6 @@ public class ControllerHandler {
 //    public void registerHomeClick(){
 //        System.out.println("\nYou have clicked register!");
 //    }
-
-
-    @GetMapping("/register")
-    public String registration() {
-//        model.addAttribute("name", name);
-        return "register";
-    }
-
 
 
 
