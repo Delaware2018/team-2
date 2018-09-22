@@ -8,17 +8,12 @@ import org.springframework.web.bind.annotation.*;
 public class ControllerHandler {
     private UserRepository repo;
    private final String HOME_PAGE = "/";
-   private final String LOGIN_PAGE = "/login";
-   public Service serviceI;
 
     //Home Page
     @GetMapping("/")
     public String homePageRequest() {
         return "home";
     }
-
-
-
     @RequestMapping(value=HOME_PAGE,params="login", method= RequestMethod.POST)
     public String loginHomeClick(){
 
@@ -35,21 +30,12 @@ public class ControllerHandler {
     }
 
 
+    //Register
     @GetMapping("/register")
     public String loadRegister(Model model){
         model.addAttribute("newBe", new User());
         return "register";
     }
-
-//    @GetMapping("/register_cont")
-//    public String registration_cont() {
-//        return "register_cont";
-//    }
-//
-//    @GetMapping("/login")
-//    public String login() {
-//        return "login";
-//    }
 
     @PostMapping("/register")
     public String registerEnd(@ModelAttribute User newBe){
@@ -57,31 +43,44 @@ public class ControllerHandler {
         return "register_cont";
     }
 
+    //2nd Page of registration
+    @GetMapping("/register_cont")
+    public String registration_cont(Model model) {
+        model.addAttribute("credentials", new Credentials());
+        return "register_cont";
+    }
+    @PostMapping("/register_cont")
+    public String registration_contEnd(@ModelAttribute Credentials credential){
+        if(Credentials.isValid(credential)) {
+            Credentials.create(credential);
+            return "home";
+        }
+        else
+            return "register_cont";
+    }
+
+    //Login processes
     @GetMapping("/login")
     public String loginUserSetUp(Model model){
         model.addAttribute("credentials", new Credentials());
         return "login";
     }
-<<<<<<< HEAD
-=======
-//    @RequestMapping(value=HOME_PAGE, params="registerClick", method = RequestMethod.TRACE)
-//    public void registerHomeClick(){
-//        System.out.println("\nYou have clicked register!");
-//    }
+    @PostMapping("/login")
+    public String loginUser(@ModelAttribute Credentials credential){
+        if(Credentials.isUser(credential))
+            return "donate";
+        else
+            return "home";
+    }
 
 
     @GetMapping("/donations")
     public String donations(){
         return "donations";
     }
->>>>>>> 81d37329e498bce74560984e99c992ab471f70e8
 
 
-    @PostMapping("/login")
-    public String loginUser(){
 
-        return "home";
-    }
 
 
 }
