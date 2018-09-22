@@ -49,10 +49,16 @@ public class User{
         this.phoneNumber = phoneNumber; }
 
 
+<<<<<<< HEAD
      public static void createUser(User user2){
         String test = "Select * FROM Employee" + user2.getName() + "AND pass = ' ' " + user2.getName()+ "' '";
         return ;
     }
+=======
+     public static void createUser(User user){
+        System.out.println("TESTING: Name: " + user.getName() + "\nZip: " + user.getZipCode() + "\nPhone: " + user.getPhoneNumber());
+     }
+>>>>>>> 47d6ece0f5a1826dcbf485f03e29a8e377c0a1ff
 
 
 }

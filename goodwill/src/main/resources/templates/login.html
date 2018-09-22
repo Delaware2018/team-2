@@ -21,12 +21,12 @@
         </div>
 
         <div class="flex-item" id="buttons">
-            <form action="#" th:action="@{/login}" th:object="${credentials}" method="post">
+            <form action="#login" th:action="@{/login}" th:object="${credential}" method="post">
                 <p>Email</p>
-                <input type="text" th:value="*{username}" placeholder="JohnDoe@email.com"/>
+                <input type="text"  placeholder="JohnDoe@email.com"/>
                 <br>
                 <p>Password</p>
-                <input type="password" th:value="*{password}" placeholder="••••••••"/>
+                <input type="password" placeholder="••••••••"/>
                 <br>
 
 

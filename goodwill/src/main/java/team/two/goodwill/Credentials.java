@@ -8,9 +8,10 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="creds")
+@Table(name="credentials")
 public class Credentials {
 
+    public Credentials(){}
 
     @Id
     private int key;
@@ -44,7 +45,7 @@ public class Credentials {
 
 
     public static boolean isValid(Credentials input){
-     return input.password.length() > 8 && input.password != input.username && input.password == input.passwordVer;
+     return true/*input.password.length() > 8 && input.password != input.username && input.password == input.passwordVer*/;
     }
 
     public static void create(Credentials input){

@@ -36,7 +36,6 @@ public class ControllerHandler {
         model.addAttribute("newBe", new User());
         return "register";
     }
-
     @PostMapping("/register")
     public String registerEnd(@ModelAttribute User newBe){
         User.createUser(newBe);
@@ -44,39 +43,60 @@ public class ControllerHandler {
     }
 
     //2nd Page of registration
+    @RequestMapping(value="/register_cont",params="register",method = RequestMethod.GET)
+    public String registration_cont(){
+        return "donations";
+    }
     @GetMapping("/register_cont")
     public String registration_cont(Model model) {
         model.addAttribute("credentials", new Credentials());
-        return "register_cont";
+        return "points";
     }
     @PostMapping("/register_cont")
-    public String registration_contEnd(@ModelAttribute Credentials credential){
-        if(Credentials.isValid(credential)) {
-            Credentials.create(credential);
-            return "home";
+    public String registration_contEnd(@ModelAttribute Credentials credentials){
+        if(Credentials.isValid(credentials)) {
+            Credentials.create(credentials);
+            return "donations";
         }
         else
-            return "register_cont";
+            return "home";
     }
 
     //Login processes
+
     @GetMapping("/login")
     public String loginUserSetUp(Model model){
-        model.addAttribute("credentials", new Credentials());
+        System.out.println("got here");
+        model.addAttribute("credential", new Credentials());
         return "login";
     }
     @PostMapping("/login")
     public String loginUser(@ModelAttribute Credentials credential){
         if(Credentials.isUser(credential))
-            return "donate";
+            return "donations";
         else
             return "home";
     }
 
 
+    // TODO remove
     @GetMapping("/donations")
     public String donations(){
         return "donations";
+    }
+
+    @PostMapping("/donations")
+    public String donationsEnd(){
+        return "points";
+    }
+    
+    @GetMapping("/points")
+    public String points(){
+        return "points";
+    }
+    @PostMapping("/points")
+    public String pointsEnd(){
+        return "home";
     }
 
 
