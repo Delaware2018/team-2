@@ -42,6 +42,11 @@ public class User {
     }
 
     public void setPhoneNumber(long phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+        this.phoneNumber = phoneNumber; }
+
+
+     public static void createUser(User user){
+     }
+
+
 }

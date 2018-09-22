@@ -9,7 +9,7 @@ public class ControllerHandler {
     private UserRepository repo;
    private final String HOME_PAGE = "/";
    private final String LOGIN_PAGE = "/login";
-   private Service service;
+   public Service serviceI;
 
     //Home Page
     @GetMapping("/")
@@ -52,37 +52,23 @@ public class ControllerHandler {
 //    }
 
     @PostMapping("/register")
-    public String registerEnd(@ModelAttribute User newBe, @RequestParam(name="name") String name){
-        service.setUser(newBe);
-        return "test";
+    public String registerEnd(@ModelAttribute User newBe){
+        User.createUser(newBe);
+        return "register_cont";
     }
+
+    @GetMapping("/login")
+    public String loginUserSetUp(Model model){
+        model.addAttribute("credentials", new Credentials());
+        return "login";
+    }
+
 
     @PostMapping("/login")
     public String loginUser(){
-        return "";
+
+        return "home";
     }
-//    @RequestMapping(value=HOME_PAGE, params="registerClick", method = RequestMethod.TRACE)
-//    public void registerHomeClick(){
-//        System.out.println("\nYou have clicked register!");
-//    }
-
-
-
-
-    //Below is testing locations for input
-
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        return "test";
-    }
-
-
-    @GetMapping("/test")
-    public String test(){
-        return "test";
-    }
-
 
 
 }
